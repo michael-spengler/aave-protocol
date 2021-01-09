@@ -793,6 +793,11 @@ contract LendingPool is ReentrancyGuard, VersionedInitializable {
         }
     }
 
+    function preLiquidationCall(){
+        // to Be implemented
+        // can only be called by the investor himself before the liquidation threshold is reached - saving the liquidation fee for the investor
+    }
+    
     /**
     * @dev users can invoke this function to liquidate an undercollateralized position.
     * @param _reserve the address of the collateral to liquidated
